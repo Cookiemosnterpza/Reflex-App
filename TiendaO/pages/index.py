@@ -1,4 +1,5 @@
-import refles as rx
+import reflex as rx 
+
 
 def navbar_link(text: str, url: str) -> rx.Component:
     return rx.link(
@@ -16,11 +17,11 @@ def navbar() -> rx.Component:
                         width="2.25em",
                         height="auto",
                         border_radius="25%",
-                    ),
+                        ),
                     rx.heading(
                         "Reflex", size="7", weight="bold"
-                    ),
-                    align_items="center",
+                        ),
+                        align_items="center",
                 ),
                 rx.hstack(
                     navbar_link("Home", "/#"),
@@ -29,7 +30,7 @@ def navbar() -> rx.Component:
                     navbar_link("Contact", "/#"),
                     justify="end",
                     spacing="5",
-                ),
+                    ),
                 justify="between",
                 align_items="center",
             ),
@@ -46,7 +47,7 @@ def navbar() -> rx.Component:
                     rx.heading(
                         "Reflex", size="6", weight="bold"
                     ),
-                    align_items="center",
+                        align_items="center",
                 ),
                 rx.menu.root(
                     rx.menu.trigger(
@@ -70,4 +71,14 @@ def navbar() -> rx.Component:
         # top="0px",
         # z_index="5",
         width="100%",
+    ),
+
+
+@rx.page(Route="/inicio", tittle="inicio") 
+def Inicio():
+    return rx.container(
+        navbar()
     )
+
+       
+    
