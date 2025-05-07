@@ -1,13 +1,13 @@
-import refles as rx 
+import reflex as rx 
+from typing import Optional
+from sqlmodel import Field
 
-class UsuariosModel(rx.Model):
-    id: int
-    nombre: str
-    apellido_p: str
-    apellido_m: str
-    correo: str
-    contraseña: str
+class User(rx.Model, table=True):
+    Id: Optional[int] = Field(default=None, primary_key=True)
+    Nombre: str
+    Email: str
+    Contraseña: str
+    tipo: str
+    #fecha_creacion: int
 
 
-class UsuarioTipoModel(rx.Model):
-    id: int   

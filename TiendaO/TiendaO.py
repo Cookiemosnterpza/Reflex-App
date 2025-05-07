@@ -7,7 +7,9 @@ from rxconfig import config
 
 
 class State(rx.State):
-    """The app state."""
+    
+    
+
 
     ...
 
@@ -47,7 +49,7 @@ def navbar() -> rx.Component:
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
+                        src="/logo.jpeg",
                         width="2.25em",
                         height="auto",
                         border_radius="25%",
@@ -58,8 +60,8 @@ def navbar() -> rx.Component:
                         align_items="center",
                 ),
                 rx.hstack(
-                    navbar_link("Home", "/prueba"),
-                    navbar_link("About", "/#"),
+                    navbar_link("Registro", "/prueba"),
+                    navbar_link("Usuarios", "/user"),
                     navbar_link("Pricing", "/#"),
                     navbar_link("Contact", "/#"),
                     rx.color_mode.button(position="top-right"),
